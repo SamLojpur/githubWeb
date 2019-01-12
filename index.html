@@ -12,10 +12,33 @@
 		top: 0px;
 		left: 0px;
 	}
+	body {
+	 background-image: url("bg.png");
+	 background-color: #cccccc;
+	 background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center top; 
+	}
 	</style>
-<body>
-<img src="Dotmm.png" alt="Logo" class = "logo">
+<script>
+	setInterval(shake, 5);
 
-<img src="bg.png" alt="Background" class = "bg">
+	function shake(){
+	var x = Math.floor(Math.random() * (10 + 10 + 1)) + 10;
+	var y = Math.floor(Math.random() * (10 + 10 + 1)) + 10;
+
+	document.getElementById("logo").style.left = x + "px";
+	document.getElementById("logo").style.top = y + "px";
+
+}
+
+</script>
+
+
+<body>
+
+<img src="Dotmm.png" alt="Logo" class = "logo" id = "logo">
+
+
 </body>
 </html>
